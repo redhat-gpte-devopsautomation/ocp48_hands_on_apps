@@ -7,7 +7,7 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: prod-coffeeshop
-  project: coffee-shop
+  project: default
   source:
     chart: coffee-shop-postgresql
     helm:

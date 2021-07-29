@@ -7,7 +7,7 @@ spec:
   destination:
     namespace: coffeeshop-pipeline
     server: https://kubernetes.default.svc
-  project: coffee-shop
+  project: default
   source:
     path: ./coffee-shop-pipeline
     repoURL: http://github.com/redhat-gpte-devopsautomation/hands_on_apps.git
