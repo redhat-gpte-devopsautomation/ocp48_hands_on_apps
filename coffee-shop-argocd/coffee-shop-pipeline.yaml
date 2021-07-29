@@ -2,14 +2,15 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: coffee-shop-pipeline
-  namespace: GUID-argocd
+  namespace: openshift-gitops
 spec:
   destination:
-    namespace: GUID-pipeline
+    namespace: coffeeshop-pipeline
     server: https://kubernetes.default.svc
   project: coffee-shop
   source:
     path: ./coffee-shop-pipeline
-    repoURL: http://homework-gitea.gpte-hw-cicd.svc:3000/OCP_USERNAME-GUID/coffee-shop-final-lab.git
+    repoURL: http://github.com/redhat-gpte-devopsautomation/hands_on_apps.git
+      #repoURL: http:///OCP_USERNAME-GUID/coffee-shop-final-lab.git
     targetRevision: HEAD
 

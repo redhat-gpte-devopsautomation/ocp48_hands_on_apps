@@ -2,11 +2,11 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: coffee-shop-database-prod
-  namespace: GUID-argocd
+  namespace: openshift-gitops
 spec:
   destination:
     server: https://kubernetes.default.svc
-    namespace: GUID-prod-coffeeshop
+    namespace: prod-coffeeshop
   project: coffee-shop
   source:
     chart: coffee-shop-postgresql
@@ -27,5 +27,5 @@ spec:
       - forceString: true
         name: credentials.password
         value: coffee
-    repoURL: http://homework-nexus.gpte-hw-cicd.svc:8081/repository/helm
+    repoURL: http://github.com/redhat-gpte-devopsautomation/hands_on_apps.git
     targetRevision: 1.0.0

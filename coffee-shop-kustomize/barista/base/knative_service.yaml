@@ -15,7 +15,7 @@ spec:
     spec:
       containerConcurrency: 0
       containers:
-      - image: <PATCH_ME>
+      - image: quay.io/gpte-devops-automation/barista
         name: user-container
         ports:
         - containerPort: 8080
