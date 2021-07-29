@@ -5,6 +5,8 @@ kind: Kustomization
 bases:
 - ../../base
 
+namespace: prod-coffeeshop
+
 patches:
 - ./deployment-patches.yaml
 

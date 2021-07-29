@@ -17,3 +17,4 @@ configMapGenerator:
   envs:
   - ./configmap.env
 
+namespace: dev-coffeeshop
