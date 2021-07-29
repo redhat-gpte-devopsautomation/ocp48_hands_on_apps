@@ -1,0 +1,11 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: coffee-shop
+spec:
+  template:
+    spec:
+      containers:
+      - name: coffee-shop
+        image: NEXUS_REGISTRY_HOSTNAME/GUID-coffee-shop:prod-2021-04-23-16-35-04
+

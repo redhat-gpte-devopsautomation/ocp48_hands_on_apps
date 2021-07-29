@@ -1,0 +1,11 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: coffee-shop
+spec:
+  template:
+    spec:
+      containers:
+      - name: coffee-shop
+        image: image-registry.openshift-image-registry.svc:5000/GUID-dev-coffeeshop/coffee-shop:latest
+
