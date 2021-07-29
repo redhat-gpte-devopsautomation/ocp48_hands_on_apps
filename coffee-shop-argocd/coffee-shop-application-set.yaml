@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: coffee-shop-set
+  namespace: openshift-gitops
+spec:
+  generators:
+  - git:
+      repoURL: https://github.com/redhat-gpte-devopsautomation/ocp48_hands_on_apps.git
+      revision: HEAD
+      directories:
+      - path: coffee-shop-kustomize/*
+  template:
+    metadata:
+      name: '{{path.basename}}'
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/redhat-gpte-devopsautomation/ocp48_hands_on_apps.git
+        targetRevision: HEAD
+        path: '{{path}}/overlays/production/'
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: prod_coffeeshop
+
