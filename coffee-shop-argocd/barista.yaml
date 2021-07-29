@@ -10,5 +10,5 @@ spec:
   project: default
   source:
     path: ./coffee-shop-kustomize/barista/overlays/production
-    repoURL: http://github.com/redhat-gpte-devopsautomation/hands_on_apps.git
+    repoURL: http://github.com/redhat-gpte-devopsautomation/ocp48_hands_on_apps.git
     targetRevision: HEAD
