@@ -6,7 +6,7 @@ metadata:
 spec:
   generators:
   - git:
-      repoURL: https://github.com/redhat-gpte-devopsautomation/ocp48-hands_on_apps.git
+      repoURL: https://github.com/redhat-gpte-devopsautomation/ocp48_hands_on_apps.git
       revision: HEAD
       directories:
       - path: coffee-shop-kustomize/*
