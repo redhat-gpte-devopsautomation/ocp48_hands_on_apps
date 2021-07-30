@@ -11,6 +11,8 @@ spec:
   syncPolicy:
     automated:
       selfHeal: true
+      prune: true
+      allowEmpty: true
   source:
     path: ./coffee-shop-kustomize/coffee-shop/overlays/production
     repoURL: http://github.com/redhat-gpte-devopsautomation/ocp48_hands_on_apps.git
