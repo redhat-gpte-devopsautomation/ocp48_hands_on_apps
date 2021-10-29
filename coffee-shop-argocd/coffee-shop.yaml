@@ -10,7 +10,7 @@ spec:
   project: default
   source:
     path: ./coffee-shop-kustomize/coffee-shop/overlays/production
-    repoURL: http://github.com/redhat-gpte-devopsautomation/ocp48_hands_on_apps.git
+    repoURL: https://github.com/redhat-gpte-devopsautomation/ocp48_hands_on_apps.git
     targetRevision: HEAD
   syncPolicy:
     automated: # automated sync by default retries failed attempts 5 times with following delays between attempts ( 5s, 10s, 20s, 40s, 80s ); retry controlled using `retry` field.
